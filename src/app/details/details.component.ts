@@ -48,6 +48,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 
 
+
 export class DetailsComponent {
 
   route: ActivatedRoute = inject(ActivatedRoute);
