@@ -50,7 +50,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 
 export class DetailsComponent {
-
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;

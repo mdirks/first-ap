@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
-
+import { RouterModule, RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -11,7 +11,10 @@ import { HousingService } from '../housing.service';
   standalone: true,
   imports: [
     CommonModule, 
-    HousingLocationComponent
+    HousingLocationComponent,
+    RouterModule,
+    RouterOutlet,
+    RouterLink,
   ],
   template: `
   <section>
@@ -25,6 +28,10 @@ import { HousingService } from '../housing.service';
       *ngFor="let housingLocation of filteredLocationList"
       [housingLocation]="housingLocation">
     </app-housing-location>
+  </section>
+  <section>
+    <h1> <a [routerLink]="['/mycomp','Hello']">1</a>  </h1>
+    <h1> <a [routerLink]="['/mycomp','Chiao']">2</a>  </h1>  
   </section>
 `,
   styleUrls: ['./home.component.css']
